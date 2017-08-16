@@ -2,13 +2,16 @@
 
 module.exports = {
 
-  development: {
-    client: 'sqlite3',
+development: {
+    client: 'pg',
     connection: {
-      filename: './dev.sqlite3'
+      database: 'migrations',
+      host: '127.0.0.1'
+    },
+    seeds: {
+      directory: './seeds'
     }
   },
-
   staging: {
     client: 'postgresql',
     connection: {
